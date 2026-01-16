@@ -14,51 +14,57 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh; /* 確保高度足夠 */
         }
         h1 {
             color: #333;
             margin-bottom: 40px;
+            margin-top: 20px;
         }
         .container {
             display: flex;
-            gap: 30px; /* 按鈕之間的距離 */
+            gap: 30px;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 20px;
         }
         .card {
             background: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             text-align: center;
-            width: 250px;
+            width: 220px; /* 稍微調窄一點以便放三個 */
             transition: transform 0.2s;
-            text-decoration: none; /* 去掉底線 */
+            text-decoration: none;
             color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .card:hover {
-            transform: translateY(-10px); /* 滑鼠放上去會浮起來 */
+            transform: translateY(-10px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
         .icon {
-            font-size: 50px;
-            display: block;
-            margin-bottom: 20px;
+            font-size: 40px;
+            margin-bottom: 15px;
         }
         .title {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
-            display: block;
             margin-bottom: 10px;
+            display: block;
         }
         .desc {
             color: #666;
-            font-size: 14px;
+            font-size: 13px;
+            line-height: 1.5;
         }
         /* 定義顏色 */
-        .chem { border-top: 5px solid #e74c3c; } /* 紅色系 */
-        .phy { border-top: 5px solid #3498db; }  /* 藍色系 */
+        .chem { border-top: 5px solid #e74c3c; } /* 紅色 */
+        .phy  { border-top: 5px solid #3498db; } /* 藍色 */
+        .self { border-top: 5px solid #9b59b6; } /* 紫色 (新分頁) */
     </style>
 </head>
 <body>
@@ -76,12 +82,18 @@
         <a href="/snellslaw/" class="card phy">
             <span class="icon">📐</span>
             <span class="title">斯涅爾定律</span>
-            <span class="desc">Snell's Law<br>光學折射的原理</span>
+            <span class="desc">Snell's Law<br>光學折射原理</span>
+        </a>
+
+        <a href="/refraction-learning/" class="card self">
+            <span class="icon">🎓</span>
+            <span class="title">自學：折射定律</span>
+            <span class="desc">自學網站--折射(斯涅耳定律)<br>完整互動課程</span>
         </a>
 
     </div>
 
-    <footer style="margin-top: 50px; color: #888; font-size: 12px;">
+    <footer style="margin-top: 40px; color: #888; font-size: 12px; margin-bottom: 20px;">
         © 2025 My Science Portfolio
     </footer>
 
